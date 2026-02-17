@@ -91,7 +91,6 @@ export function Main() {
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
-                                    // backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 3px, rgba(255,255,255,.05) 3px, rgba(255,255,255,.05) 6px)",
                                     fontSize: "22px",
                                     color: "white"
                                 }}>
@@ -177,7 +176,7 @@ export function Main() {
                                 position: "absolute",
                                 height: "200px",
                                 width: "200px",
-                                background: "#B38F00", // slightly darker yellow for depth
+                                background: "#B38F00", 
                                 transform: "rotateX(-90deg) translateZ(100px)",
                             }} />
                         </div>
@@ -224,7 +223,7 @@ export function Main() {
                                 position: "absolute",
                                 width: "200px",
                                 height: "200px",
-                                background: "#992E0F", // darker red for depth
+                                background: "#992E0F", 
                                 transform: "rotateX(-90deg) translateZ(100px)",
                             }} />
                         </div>
@@ -233,5 +232,6 @@ export function Main() {
                 </div>
             </div>
         </div>
+
     );
 }
