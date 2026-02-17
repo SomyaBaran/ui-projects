@@ -33,12 +33,10 @@ export function Main() {
 
             </nav>
 
-            {/* Hero Section */}
             <div style={{
                 position: "relative",
                 paddingTop: "120px",
                 paddingBottom: "100px",
-                background: "white",
                 overflow: "hidden",
                 minHeight: "100vh"
             }}>
@@ -54,7 +52,7 @@ export function Main() {
                     transform: `translateY(${scrollY * 0.3}px)`,
                     transition: "opacity 0.1s"
                 }}>
-                    {/* Left side - Text */}
+
                     <div>
                         <h1 style={{
                             fontSize: "64px",
@@ -272,9 +270,6 @@ export function Main() {
                     </div>
                 </div>
             </div>
-
-            {/* Content Below Hero */}
-
         </div>
     );
 }
