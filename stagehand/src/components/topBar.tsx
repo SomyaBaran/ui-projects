@@ -101,7 +101,8 @@ export function Topbar() {
                     display: "flex",
                     alignItems: "center",
                     gap: "8px",
-                    padding: "3px 10px",
+                    height: "4.5vh",
+                    padding: "0 10px",
                     border: "2px dashed black",
                     cursor: "pointer",
                     fontFamily: "'Inter', sans-serif"
@@ -130,6 +131,7 @@ export function Topbar() {
                 <div style={{
                     display: "flex",
                     alignItems: "center",
+                    height: "4.5vh",
                     gap: "8px",
                     padding: "3px 10px",
                     border: "2px dashed black",
@@ -200,6 +202,7 @@ export function Topbar() {
                 <div style={{
                     display: "flex",
                     alignItems: "center",
+                    height: "4.5vh",
                     gap: "8px",
                     padding: "3px 10px",
                     border: "2px dashed black",
