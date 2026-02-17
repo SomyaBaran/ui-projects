@@ -12,27 +12,10 @@ export function Main() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // Calculate opacity and transforms based on scroll
-    const heroOpacity = Math.max(0, 1 - scrollY / 600);
     const cubesOpacity = Math.max(0, 1 - scrollY / 500);
-    const linesOpacity = Math.max(0, 1 - scrollY / 400);
 
     return (
         <div style={{ minHeight: "200vh", background: "#f5f5f5" }}>
-            {/* Fixed Navigation */}
-            <nav style={{
-                position: "fixed",
-                top: 0,
-                left: 0,
-                right: 0,
-                zIndex: 50,
-                background: "white",
-                borderBottom: "1px solid #e5e5e5",
-                fontFamily: "'Inter', sans-serif",
-            }}>
-
-            </nav>
-
             <div style={{
                 position: "relative",
                 paddingTop: "120px",
@@ -42,13 +25,10 @@ export function Main() {
             }}>
                 <div style={{
                     maxWidth: "1400px",
-                    margin: "0 auto",
-                    padding: "0 40px",
                     display: "grid",
                     gridTemplateColumns: "1fr 1fr",
                     gap: "80px",
                     alignItems: "center",
-                    opacity: heroOpacity,
                     transform: `translateY(${scrollY * 0.3}px)`,
                     transition: "opacity 0.1s"
                 }}>
@@ -71,6 +51,7 @@ export function Main() {
                             marginBottom: "40px",
                             lineHeight: "1.6",
                             fontFamily: "'Inter', sans-serif",
+                            wordSpacing: "-1px"
                         }}>
                             We built an OSS alternative to Playwright that's easier to use and lets AI reliably read and write on the web.
                         </p>
@@ -104,13 +85,13 @@ export function Main() {
                                 </span>
                                 <span style={{
                                     padding: "14px",
-                                    height: "3vh",
+                                    height: "7vh",
                                     background: "#1a1a1a",
                                     border: "2px solid #000",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
-                                    backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 3px, rgba(255,255,255,.05) 3px, rgba(255,255,255,.05) 6px)",
+                                    // backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 3px, rgba(255,255,255,.05) 3px, rgba(255,255,255,.05) 6px)",
                                     fontSize: "22px",
                                     color: "white"
                                 }}>
@@ -190,7 +171,18 @@ export function Main() {
                                 background: "#E6B800",
                                 transform: "rotateY(90deg) translateZ(100px)",
                             }} />
+
+                            {/* // BOTTOM FACE */}
+                            <div style={{
+                                position: "absolute",
+                                height: "200px",
+                                width: "200px",
+                                background: "#B38F00", // slightly darker yellow for depth
+                                transform: "rotateX(-90deg) translateZ(100px)",
+                            }} />
                         </div>
+
+                        {/* // Red cube  */}
                         <div style={{
                             position: "absolute",
                             bottom: "50px",
@@ -226,7 +218,17 @@ export function Main() {
                                 background: "#CC3D15",
                                 transform: "rotateY(90deg) translateZ(100px)",
                             }} />
+
+                            {/* Bottom face */}
+                            <div style={{
+                                position: "absolute",
+                                width: "200px",
+                                height: "200px",
+                                background: "#992E0F", // darker red for depth
+                                transform: "rotateX(-90deg) translateZ(100px)",
+                            }} />
                         </div>
+
                     </div>
                 </div>
             </div>
