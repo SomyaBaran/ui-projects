@@ -167,7 +167,6 @@ export function Main() {
                                 width: "200px",
                                 background: "#FFD43B",
                                 transform: "translateZ(100px)",
-                                border: "2px solid #000",
                                 fontSize: "60px",
                                 display: "flex",
                                 alignItems: "center",
@@ -175,18 +174,58 @@ export function Main() {
                             }} />
 
                             {/* // TOP FACE */}
-
                             <div style={{
                                 position: "absolute",
                                 height: "200px",
                                 width: "200px",
                                 background: "#333",
                                 transform: "rotateX(90deg) translateZ(100px)",
-                                border: "2px solid #000",
-                                // backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.1) 10px, rgba(255,255,255,.1) 20px)"
                             }} />
 
                             {/* // RIGHT FACE  */}
+                            <div style={{
+                                position: "absolute",
+                                height: "200px",
+                                width: "200px",
+                                background: "#E6B800",
+                                transform: "rotateY(90deg) translateZ(100px)",
+                            }} />
+                        </div>
+                        <div style={{
+                            position: "absolute",
+                            bottom: "50px",
+                            right: "50px",
+                            width: "200px",
+                            height: "200px",
+                            transform: `perspective(1000px) rotateX(${25 + scrollY * 0.05}deg) rotateY(${-45 + scrollY * 0.1}deg)`,
+                            transformStyle: "preserve-3d"
+                        }}>
+                            {/* Front face */}
+                            <div style={{
+                                position: "absolute",
+                                width: "200px",
+                                height: "200px",
+                                background: "#FF4D1A",
+                                transform: "translateZ(100px)",
+                            }} />
+
+                            {/* Top face */}
+                            <div style={{
+                                position: "absolute",
+                                width: "200px",
+                                height: "200px",
+                                background: "#333",
+                                transform: "rotateX(90deg) translateZ(100px)",
+                            }} />
+
+                            {/* Right face */}
+                            <div style={{
+                                position: "absolute",
+                                width: "200px",
+                                height: "200px",
+                                background: "#CC3D15",
+                                transform: "rotateY(90deg) translateZ(100px)",
+                            }} />
                         </div>
                     </div>
                 </div>
