@@ -12,6 +12,18 @@ export function Main() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollY(window.scrollY);
+
+        }
+            window.addEventListener('scroll', handleScroll, {
+                passive: true
+            });
+
+            return () => window.removeEventListener('scroll', handleScroll);
+    })
     const cubesOpacity = Math.max(0, 1 - scrollY / 500);
 
     return (
@@ -176,7 +188,7 @@ export function Main() {
                                 position: "absolute",
                                 height: "200px",
                                 width: "200px",
-                                background: "#B38F00", 
+                                background: "#B38F00",
                                 transform: "rotateX(-90deg) translateZ(100px)",
                             }} />
                         </div>
@@ -223,7 +235,7 @@ export function Main() {
                                 position: "absolute",
                                 width: "200px",
                                 height: "200px",
-                                background: "#992E0F", 
+                                background: "#992E0F",
                                 transform: "rotateX(-90deg) translateZ(100px)",
                             }} />
                         </div>
@@ -232,6 +244,5 @@ export function Main() {
                 </div>
             </div>
         </div>
-
     );
 }
