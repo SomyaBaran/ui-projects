@@ -172,7 +172,21 @@ export function Main() {
                                 display: "flex",
                                 alignItems: "center",
                                 justifyContent: "center"
-                            }}></div>
+                            }} />
+
+                            {/* // TOP FACE */}
+
+                            <div style={{
+                                position: "absolute",
+                                height: "200px",
+                                width: "200px",
+                                background: "#333",
+                                transform: "rotateX(90deg) translateZ(100px)",
+                                border: "2px solid #000",
+                                // backgroundImage: "repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,.1) 10px, rgba(255,255,255,.1) 20px)"
+                            }} />
+
+                            {/* // RIGHT FACE  */}
                         </div>
                     </div>
                 </div>
