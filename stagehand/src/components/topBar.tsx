@@ -1,10 +1,19 @@
+import { useState } from "react";
+
 export function Topbar() {
+    const [isDeployHovered, setIsDeployHovered] = useState(false);
+    const [isEvalsHovered, setIsEvalsHovered] = useState(false);
+    const [isComputerEvalsHovered, setIsComputerEvalsHovered] = useState(false);
+    const [isGithubHovered, setIsGithubHovered] = useState(false);
+    const [isDiscordHovered, setIsDiscordHovered] = useState(false);
+    const [isDocsHovered, setIsDocsHovered] = useState(false);
+
     return (
         <div style={{
             width: "90vw",
             height: "9vh",
             border: "2px solid black",
-            marginTop: "-8px",
+            marginTop: "-6px",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
@@ -28,9 +37,7 @@ export function Topbar() {
                     <img
                         src="https://i.ibb.co/HLWDb5p9/image.png"
                         alt="stageHandLogo"
-                        style={{
-                            height: "60%"
-                        }}
+                        style={{ height: "60%" }}
                     />
                 </div>
                 <div style={{
@@ -62,15 +69,22 @@ export function Topbar() {
                 alignItems: "center",
                 gap: "15px"
             }}>
-                <div style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    padding: "3px 10px",
-                    border: "2px dashed black",
-                    cursor: "pointer",
-                    fontFamily: "'Inter', sans-serif"
-                }}>
+                {/* Deploy to prod */}
+                <div
+                    style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "10px",
+                        padding: "3px 10px",
+                        border: "2px dashed black",
+                        cursor: "pointer",
+                        fontFamily: "'Inter', sans-serif",
+                        backgroundColor: isDeployHovered ? "#FCDF8C" : "transparent",
+                        transition: "background-color 0.2s ease",
+                    }}
+                    onMouseEnter={() => setIsDeployHovered(true)}
+                    onMouseLeave={() => setIsDeployHovered(false)}
+                >
                     <span style={{
                         fontSize: "16px",
                         fontWeight: "600",
@@ -97,16 +111,23 @@ export function Topbar() {
                     </div>
                 </div>
 
-                <div style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "8px",
-                    height: "4.5vh",
-                    padding: "0 10px",
-                    border: "2px dashed black",
-                    cursor: "pointer",
-                    fontFamily: "'Inter', sans-serif"
-                }}>
+                {/* Evals */}
+                <div
+                    style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "8px",
+                        height: "4.5vh",
+                        padding: "0 10px",
+                        border: "2px dashed black",
+                        cursor: "pointer",
+                        fontFamily: "'Inter', sans-serif",
+                        backgroundColor: isEvalsHovered ? "#FCDF8C" : "transparent",
+                        transition: "background-color 0.2s ease",
+                    }}
+                    onMouseEnter={() => setIsEvalsHovered(true)}
+                    onMouseLeave={() => setIsEvalsHovered(false)}
+                >
                     <span style={{
                         fontSize: "15px",
                         fontWeight: "700",
@@ -128,16 +149,23 @@ export function Topbar() {
                     </span>
                 </div>
 
-                <div style={{
-                    display: "flex",
-                    alignItems: "center",
-                    height: "4.5vh",
-                    gap: "8px",
-                    padding: "3px 10px",
-                    border: "2px dashed black",
-                    cursor: "pointer",
-                    fontFamily: "'Inter', sans-serif"
-                }}>
+                {/* Computer Use Evals */}
+                <div
+                    style={{
+                        display: "flex",
+                        alignItems: "center",
+                        height: "4.5vh",
+                        gap: "8px",
+                        padding: "3px 10px",
+                        border: "2px dashed black",
+                        cursor: "pointer",
+                        fontFamily: "'Inter', sans-serif",
+                        backgroundColor: isComputerEvalsHovered ? "#FCDF8C" : "transparent",
+                        transition: "background-color 0.2s ease",
+                    }}
+                    onMouseEnter={() => setIsComputerEvalsHovered(true)}
+                    onMouseLeave={() => setIsComputerEvalsHovered(false)}
+                >
                     <span style={{
                         fontSize: "15px",
                         fontWeight: "700",
@@ -159,15 +187,22 @@ export function Topbar() {
                     </span>
                 </div>
 
-                <div style={{
-                    width: "40px",
-                    height: "40px",
-                    border: "2px dashed black",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    cursor: "pointer"
-                }}>
+                {/* GitHub */}
+                <div
+                    style={{
+                        width: "40px",
+                        height: "40px",
+                        border: "2px dashed black",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        cursor: "pointer",
+                        backgroundColor: isGithubHovered ? "#FCDF8C" : "transparent",
+                        transition: "background-color 0.2s ease",
+                    }}
+                    onMouseEnter={() => setIsGithubHovered(true)}
+                    onMouseLeave={() => setIsGithubHovered(false)}
+                >
                     <img
                         src="https://i.postimg.cc/CLXY22vh/Screenshot-2026-02-16-at-8-41-21-PM.png"
                         alt="github icon"
@@ -179,15 +214,22 @@ export function Topbar() {
                     />
                 </div>
 
-                <div style={{
-                    width: "40px",
-                    height: "40px",
-                    border: "2px dashed black",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    cursor: "pointer"
-                }}>
+                {/* Discord */}
+                <div
+                    style={{
+                        width: "40px",
+                        height: "40px",
+                        border: "2px dashed black",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        cursor: "pointer",
+                        backgroundColor: isDiscordHovered ? "#FCDF8C" : "transparent",
+                        transition: "background-color 0.2s ease",
+                    }}
+                    onMouseEnter={() => setIsDiscordHovered(true)}
+                    onMouseLeave={() => setIsDiscordHovered(false)}
+                >
                     <img
                         src="https://i.postimg.cc/x8Kfy32h/Screenshot-2026-02-16-at-9-00-51-PM.png"
                         alt="discord icon"
@@ -199,16 +241,23 @@ export function Topbar() {
                     />
                 </div>
 
-                <div style={{
-                    display: "flex",
-                    alignItems: "center",
-                    height: "4.5vh",
-                    gap: "8px",
-                    padding: "3px 10px",
-                    border: "2px dashed black",
-                    cursor: "pointer",
-                    fontFamily: "'Inter', sans-serif",
-                }}>
+                {/* Docs */}
+                <div
+                    style={{
+                        display: "flex",
+                        alignItems: "center",
+                        height: "4.5vh",
+                        gap: "8px",
+                        padding: "3px 10px",
+                        border: "2px dashed black",
+                        cursor: "pointer",
+                        fontFamily: "'Inter', sans-serif",
+                        backgroundColor: isDocsHovered ? "#FCDF8C" : "transparent",
+                        transition: "background-color 0.2s ease",
+                    }}
+                    onMouseEnter={() => setIsDocsHovered(true)}
+                    onMouseLeave={() => setIsDocsHovered(false)}
+                >
                     <span style={{
                         fontSize: "20px",
                         fontWeight: "700",
@@ -234,7 +283,6 @@ export function Topbar() {
                     height: "20px",
                     width: "20px"
                 }}>
-
                 </div>
             </div>
         </div>
