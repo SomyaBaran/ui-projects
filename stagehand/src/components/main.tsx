@@ -36,8 +36,6 @@ export function Main() {
                     gridTemplateColumns: "1fr 1fr",
                     gap: "80px",
                     alignItems: "center",
-                    transform: `translateY(${scrollY * 0.3}px)`,
-                    transition: "opacity 0.1s"
                 }}>
 
                     <div>
@@ -132,8 +130,6 @@ export function Main() {
                     <div style={{
                         position: "relative",
                         height: "500px",
-                        transform: `translateY(${scrollY * 0.2}px)`,
-                        transition: "opacity 0.1s"
                     }}>
                         {/* Yellow cube */}
                         <div style={{
