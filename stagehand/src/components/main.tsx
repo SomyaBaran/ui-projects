@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 export function Main() {
     const [scrollY, setScrollY] = useState(0);
+    const [arrowHovered, setArrowHovered] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -15,9 +16,10 @@ export function Main() {
         <div style={{
             width: "90vw",
             margin: "0 auto",
-            marginTop: "12vh",      
+            marginTop: "12vh",
             border: "2px solid black",
             borderTop: "2px solid black",
+            backgroundColor: "white",
             backgroundImage:
                 `linear-gradient(rgba(0,0,0,0.08) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0,0,0,0.08) 1px, transparent 1px)`,
@@ -76,35 +78,45 @@ export function Main() {
                                 gap: "0",
                                 overflow: "hidden"
                             }}>
-                                <span style={{
-                                    padding: "14px 24px",
-                                    background: "#FFD43B",
-                                    border: "2px solid #000",
-                                    borderRight: "none",
-                                    fontSize: "17px",
-                                    fontWeight: "700",
-                                    display: "flex",
-                                    alignItems: "center"
-                                }}>
+                                <span
+                                    onClick={() => window.open("https://docs.stagehand.dev/v3/first-steps/introduction", "_blank")}
+                                    style={{
+                                        padding: "14px 24px",
+                                        background: "#FFD43B",
+                                        border: "2px solid #000",
+                                        borderRight: "none",
+                                        fontSize: "17px",
+                                        fontWeight: "700",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        cursor: "pointer"
+                                    }}
+                                >
                                     Get started
                                 </span>
-                                <span style={{
-                                    padding: "14px",
-                                    height: "7vh",
-                                    background: "#1a1a1a",
-                                    border: "2px solid #000",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    fontSize: "22px",
-                                    color: "white"
-                                }}>
+                                <span
+                                    onMouseEnter={() => setArrowHovered(true)}
+                                    onMouseLeave={() => setArrowHovered(false)}
+                                    style={{
+                                        padding: "14px",
+                                        height: "7vh",
+                                        background: arrowHovered ? "#CE2003" : "#1a1a1a",
+                                        border: "2px solid #000",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        fontSize: "22px",
+                                        color: "white",
+                                        cursor: "pointer",
+                                        transition: "background 0.2s ease"
+                                    }}
+                                >
                                     ›
                                 </span>
                             </button>
                             <button style={{
-                                padding: "14px 28px",   
-                                background: "#ece5df",
+                                padding: "14px 28px",
+                                background: "#F9F6F4",
                                 border: "2px dotted #000",
                                 fontSize: "16px",
                                 cursor: "pointer",
