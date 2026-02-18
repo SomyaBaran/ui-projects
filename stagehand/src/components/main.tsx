@@ -105,8 +105,8 @@ export function Main() {
                                 </span>
                             </button>
                             <button style={{
-                                padding: "14px 28px",
-                                background: "white",
+                                padding: "14px 28px",   
+                                background: "#ece5df",
                                 border: "2px dotted #000",
                                 fontSize: "16px",
                                 cursor: "pointer",
