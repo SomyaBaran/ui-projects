@@ -73,7 +73,8 @@ export function Topbar() {
             <div style={{
                 display: "flex",
                 alignItems: "center",
-                gap: "15px"
+                gap: "15px",
+                paddingRight:"25px"
             }}>
                 {/* Deploy to prod */}
                 <div
@@ -283,12 +284,6 @@ export function Topbar() {
                     }}>
                         ›
                     </span>
-                </div>
-
-                <div style={{
-                    height: "20px",
-                    width: "20px"
-                }}>
                 </div>
             </div>
         </div>
