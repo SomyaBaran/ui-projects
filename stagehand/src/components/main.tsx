@@ -13,10 +13,10 @@ export function Main() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const handleCopy = () => {
+    function handleCopy() {
         navigator.clipboard.writeText("npx create-browser-app");
         setCopied(true);
-        setTimeout(() => setCopied(false), 2000);
+        setTimeout(() => setCopied(false), 4000);
     };
 
     return (
@@ -129,14 +129,14 @@ export function Main() {
                                 cursor: "pointer",
                                 display: "flex",
                                 alignItems: "center",
-                                gap: "8px"
+                                gap: "8px",
+
                             }}>
                                 npx create-browser-app
                                 <span
+                                    id="copy-btn"
                                     onClick={handleCopy}
                                     style={{
-                                        width: "20px",
-                                        height: "20px",
                                         fontSize: "25px",
                                         borderRadius: "10px",
                                         border: "none",

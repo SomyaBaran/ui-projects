@@ -10,7 +10,6 @@ export default function ThirdPage() {
             backgroundColor: "#FFE29E",
             overflow: "hidden",
         }}>
-            {/* Hatching pattern */}
             <div style={{
                 position: "absolute",
                 inset: 0,
@@ -18,7 +17,6 @@ export default function ThirdPage() {
                 zIndex: 0,
             }} />
 
-            {/* Main white box */}
             <div style={{
                 position: "absolute",
                 top: 0,
@@ -32,7 +30,6 @@ export default function ThirdPage() {
                 borderLeft: "none",
             }} />
 
-            {/* Notch piece — small white box at top-right of white box */}
             <div style={{
                 position: "absolute",
                 top: 0,
@@ -47,7 +44,7 @@ export default function ThirdPage() {
 
             <div style={{
                 position: "absolute",
-                top: "calc(25vh - 2px)",  // 👈 same trick
+                top: "calc(25vh - 2px)",  
                 left: 0,
                 zIndex: 1,
                 width: "78px",
