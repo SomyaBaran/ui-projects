@@ -5,6 +5,8 @@ import { Topbar } from './components/topBar'
 import { Main } from './components/main'
 import SecondPage from './components/secondPage'
 import './App.css'
+import ThirdPage from './components/thirdPage';
+import { FourthPage } from './components/fourthPage';
 
 function App() {
   useEffect(() => {
@@ -16,6 +18,8 @@ function App() {
       <Topbar />
       <Main />
       <SecondPage />
+      <ThirdPage />
+      <FourthPage />
     </div>
   )
 }

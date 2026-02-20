@@ -24,6 +24,7 @@ export default function SecondPage() {
                         bottom: 0,
                         left: `${left}%`,
                         width: "1px",
+                        height: "80%",
                         backgroundImage:
                             "repeating-linear-gradient(to bottom, #aaa 0px, #aaa 8px, transparent 8px, transparent 16px)",
                         zIndex: 1,

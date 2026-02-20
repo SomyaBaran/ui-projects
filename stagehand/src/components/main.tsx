@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 export function Main() {
     const [scrollY, setScrollY] = useState(0);
     const [arrowHovered, setArrowHovered] = useState(false);
+    const [copied, setCopied] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -11,6 +12,12 @@ export function Main() {
         window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText("npx create-browser-app");
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+    };
 
     return (
         <div style={{
@@ -125,15 +132,27 @@ export function Main() {
                                 gap: "8px"
                             }}>
                                 npx create-browser-app
-                                <span style={{
-                                    width: "20px",
-                                    height: "20px",
-                                    border: "2px dotted #000",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-                                    fontSize: "12px"
-                                }}></span>
+                                <span
+                                    onClick={handleCopy}
+                                    style={{
+                                        width: "20px",
+                                        height: "20px",
+                                        fontSize: "25px",
+                                        borderRadius: "10px",
+                                        border: "none",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        justifyContent: "center",
+                                        cursor: "pointer"
+                                    }}
+                                >
+                                    {copied ? "✓" : (
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                            <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                                        </svg>
+                                    )}
+                                </span>
                             </button>
                         </div>
                     </div>
