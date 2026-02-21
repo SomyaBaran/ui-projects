@@ -231,19 +231,29 @@ export default function ThirdPage() {
                 </div>
 
                 <div style={{
-                    height: "14vh",
+                    height: "10vh",
                     width: "36vw",
                     border: "2px dashed black",
                     position: "absolute",
                     marginLeft: "40vw",
-                    marginTop: "20vh",
+                    marginTop: "22vh",
                     top: "10px",
                     left: "10px",
                     fontSize: "17px",
                     fontWeight: "300",
-                    padding: "34px"
+                    padding: "20px"
                 }}>
                     Find me available apartments and their floorplans
+
+                    <div style={{
+                        width: "40px",
+                        height: "40px",
+                        border: "2px solid black",
+                        marginLeft: "30vw",
+                        marginTop: "-30px"
+                    }}>
+                        
+                    </div>
                 </div>
             </div>
         </div>
