@@ -272,6 +272,35 @@ export default function ThirdPage() {
                         onMouseEnter={e => e.currentTarget.style.transform = "translate(0, 0)"}
                         onMouseLeave={e => e.currentTarget.style.transform = "translate(-6px, 6px)"}
                     >
+                        {/* /// small box  */}
+                        <div
+                            onMouseEnter={e => (e.currentTarget.style.backgroundImage = "none", e.currentTarget.style.backgroundColor = "#EB734F")}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.backgroundColor = "";
+                                e.currentTarget.style.backgroundImage = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cline x1='0' y1='8' x2='8' y2='0' stroke='%23000000' stroke-width='0.8' stroke-opacity='0.25'/%3E%3Cline x1='-2' y1='2' x2='2' y2='-2' stroke='%23000000' stroke-width='0.8' stroke-opacity='0.25'/%3E%3Cline x1='6' y1='10' x2='10' y2='6' stroke='%23000000' stroke-width='0.8' stroke-opacity='0.25'/%3E%3C/svg%3E")`;
+                            }}
+                            style={{
+                                width: "40px",
+                                height: "40px",
+                                border: "2px solid black",
+                                marginLeft: "30vw",
+                                marginTop: "-5px",
+                                position: "absolute",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                backgroundColor: "#a9a9a9",
+                                cursor: "pointer",
+                                backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cline x1='0' y1='8' x2='8' y2='0' stroke='%23000000' stroke-width='0.8' stroke-opacity='0.25'/%3E%3Cline x1='-2' y1='2' x2='2' y2='-2' stroke='%23000000' stroke-width='0.8' stroke-opacity='0.25'/%3E%3Cline x1='6' y1='10' x2='10' y2='6' stroke='%23000000' stroke-width='0.8' stroke-opacity='0.25'/%3E%3C/svg%3E")`
+                            }}
+                        >
+                            <img
+                                src="https://www.stagehand.dev/icons/new-tab.svg"
+                                width="20"
+                                height="20"
+                                alt="new tab"
+                            />
+                        </div>
                         Find me available apartments and their floorplans
                     </div>
                 </div>
