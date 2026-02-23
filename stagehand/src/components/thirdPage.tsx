@@ -231,28 +231,48 @@ export default function ThirdPage() {
                 </div>
 
                 <div style={{
-                    height: "10vh",
-                    width: "36vw",
-                    border: "2px dashed black",
                     position: "absolute",
                     marginLeft: "40vw",
                     marginTop: "22vh",
                     top: "10px",
                     left: "10px",
-                    fontSize: "17px",
-                    fontWeight: "300",
-                    padding: "20px"
                 }}>
-                    Find me available apartments and their floorplans
-
+                    {/* Orange background layer — bottom left */}
                     <div style={{
-                        width: "40px",
-                        height: "40px",
-                        border: "2px solid black",
-                        marginLeft: "30vw",
-                        marginTop: "-30px"
+                        position: "absolute",
+                        bottom: "-8px",
+                        left: "-8px",
+                        height: "10vh",
+                        width: "36vw",
+                        backgroundColor: "#e29961",
+                        zIndex: 0,
                     }}>
-                        
+                        <div style={{
+                            position: "absolute",
+                            inset: 0,
+                            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cline x1='0' y1='8' x2='8' y2='0' stroke='%23000000' stroke-width='0.8' stroke-opacity='0.25'/%3E%3Cline x1='-2' y1='2' x2='2' y2='-2' stroke='%23000000' stroke-width='0.8' stroke-opacity='0.25'/%3E%3Cline x1='6' y1='10' x2='10' y2='6' stroke='%23000000' stroke-width='0.8' stroke-opacity='0.25'/%3E%3C/svg%3E")`,
+                        }}></div>
+                    </div>
+
+                    {/* Main card */}
+                    <div
+                        style={{
+                            height: "10vh",
+                            width: "36vw",
+                            border: "2px dashed black",
+                            position: "relative",
+                            fontSize: "17px",
+                            fontWeight: "300",
+                            padding: "20px",
+                            backgroundColor: "white",
+                            zIndex: 1,
+                            transition: "transform 0.2s ease",
+                            cursor: "pointer",
+                        }}
+                        onMouseEnter={e => e.currentTarget.style.transform = "translate(0, 0)"}
+                        onMouseLeave={e => e.currentTarget.style.transform = "translate(-6px, 6px)"}
+                    >
+                        Find me available apartments and their floorplans
                     </div>
                 </div>
             </div>
