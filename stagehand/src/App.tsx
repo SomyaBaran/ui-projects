@@ -7,6 +7,7 @@ import SecondPage from './components/secondPage'
 import './App.css'
 import ThirdPage from './components/thirdPage';
 import { FourthPage } from './components/fourthPage';
+import { FifthPage } from './components/fifthPage';
 
 function App() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function App() {
       <SecondPage />
       <ThirdPage />
       <FourthPage />
+      <FifthPage />
     </div>
   )
 }
